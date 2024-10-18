@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/index.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    padding-top: 100px; /* Prevent overlap with navbar */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* NAVBAR */
+.nav-list {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav-list nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list nav ul li {
+    margin-left: 30px;
+}
+
+.nav-list nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f1e1e;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-list nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Adjust padding so content doesn't overlap with the navbar */
+.container {
+    padding-top: 100px; /* Prevent overlap with navbar */
+}
+
+/* PIC IN THE SIDE */
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px;
+    max-width: 600px;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Title styling */
+h1 {
+    color: #fff;
+    font-size: 80px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.auto {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -25px;
+    letter-spacing: 5px;
+    font-weight: lighter;
+}
+
+/* Paragraph styling */
+p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+    word-spacing: 2px;
+}
+
+h3 p {
+    color: aqua;
+}
+
+button {
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+button:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+/* Card Grid Layout */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    grid-gap: 20px;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 20px 250px;
+    padding-left: 60%;
+}
+
+.card {
+    width: 250px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1 {
+    background-image: url(images/pic_1.jpg);
+}
+
+.card2 {
+    background-image: url(images/card2.jpg);
+}
+
+.card3 {
+    background-image: url(images/pic_3.jpg);
+}
+
+.card4 {
+    background-image: url(images/card4.jpg);
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.5s ease;
+}
+
+
+
+/* For mobile devices (screens up to 600px) */
+@media (max-width: 600px) {
+
+    .container {
+        height: auto;
+    }
+    
+    .nav-list {
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center align navbar items */
+        padding: 10px 0; /* Add some vertical padding */
+        font-size: 0.9rem; /* Make the font smaller */
+    }
+
+    .nav-list nav ul {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Stack items vertically on mobile */
+        padding: 0; /* Remove padding */
+        list-style-type: none; /* Remove bullet points */
+        margin: 0; /* Remove default margin */
+    }
+
+    .nav-list nav ul li {
+        text-align: center;
+        padding-right: 7%;/* Center align the text */
+    }
+
+    .nav-list nav ul li a {
+        color: #fff; /* White text color */
+        text-decoration: none; /* Remove underline */
+        padding: 10px 15px; /* Add some padding */
+        display: block; /* Make the link fill the li */
+        transition: background-color 0.3s; /* Smooth background transition */
+        text-align: center;
+    }
+
+    .nav-list nav ul li a:hover {
+        background-color: #555; /* Darker background on hover */
+    }
+
+    h1 {
+        font-size: 36px; /* Further reduce heading size */
+        margin-top: 20%; /* Space above h1 to separate it from the navbar */
+    }
+
+    p {
+        font-size: 14px; /* Adjust font size for better readability */
+        margin-top: 20px; /* Space above paragraph */
+    }
+
+    .row {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: flex-start;
+        padding-top: 90%; /* Align items to the top */
+    }
+    
+    .col {
+        padding: 20px; /* Reduce padding on mobile */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow height to adjust */
+        margin-bottom: 20px; /* Space below the column */
+    }
+    
+    .card-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Stack cards horizontally */
+        flex-wrap: wrap; /* Allow cards to wrap to the next line */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 20px; /* Add some padding around the container */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        margin-top: 20px; /* Space above the card container */
+        margin-bottom: 40px; /* Space below the card container */
+    }
+    
+    .card {
+        width: 200px; /* Fixed width for the cards */
+        height: 200px; /* Fixed height */
+        background-color: #f0f0f0; /* Background color for visibility */
+        margin-bottom: 10px; /* Space between cards vertically */
+        border-radius: 3%; /* Rounded corners for cards */
+        margin-right: 10px; /* Space between cards horizontally */
+    }
+    
+    
+    button {
+        width: 120px; /* Smaller button */
+        font-size: 10px;
+    }
+}
+
+
+/* For tablets (screens between 600px and 1024px) */
+@media (max-width: 1024px) {
+
+    .nav-list {
+        height: 60px; /* Adjust navbar height for tablets */
+        justify-content: center; /* Center navbar items */
+        padding-right: 20px; /* Reduce padding */
+        padding-left: 20px; /* Reduce padding */
+    }
+
+    .nav-list nav ul li a {
+        font-size: 14px; /* Reduce font size */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .container {
+        padding-left: 5%; /* Reduce padding for smaller screens */
+        padding-right: 5%; /* Reduce padding for smaller screens */
+        padding-top: 70px; /* Prevent overlap with smaller navbar */
+    }
+
+    /* Adjust title and paragraph text */
+    h1 {
+        font-size: 50px; /* Adjust font size for heading */
+        margin-top: 10%; /* Space above h1 */
+    }
+
+    p {
+        font-size: 15px; /* Slightly smaller font for readability */
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .col {
+        padding: 50px; /* Reduce padding */
+        max-width: 500px; /* Adjust max-width for tablet */
+        height: auto; /* Allow height to adjust */
+        margin-bottom: 30px; /* Add space below the column */
+    }
+
+    /* Card grid for tablets */
+    .card-container {
+        grid-template-columns: 1fr 1fr; /* Two cards per row */
+        padding: 20px; /* Reduce padding */
+        padding-left: 50px; /* Reduce padding from left */
+        padding-right: 50px; /* Reduce padding from right */
+        justify-content: center; /* Center the cards */
+        margin-top: 65%; /* Space above card container */
+    }
+
+    .card {
+        width: 100%; /* Full width for each card */
+        height: 220px; /* Adjust height for tablet */
+        margin-bottom: 15px; /* Add margin between cards */
+    }
+
+    /* Adjust button size */
+    button {
+        width: 150px; /* Adjust button size */
+        font-size: 12px; /* Adjust font size */
+    }
+
+    /* Auto text adjustment */
+    .auto {
+        font-size: 25px; /* Reduce the font size for the subtitle */
+        margin-top: -20px;
+    }
+}
+
+
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    margin-left: 93%;
+    margin-top: 1px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: none;
+    background-color: whitesmoke;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .nav-list {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        padding-right: 0;
+        border-right: none;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+    }
+}
